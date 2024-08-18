@@ -1,65 +1,179 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link';
 import 'animate.css';
+import style from './page.module.css';
+import AnimatedGif from './animatedGif';
 
 
 
 export default function Home() {
+
   return (
-    <div className="container marketing mt-5 mb-5" bis_skin_checked="1">
-      <h1 className="featurette-heading fw-normal lh-1">DONETSK.<span className="text-body-secondary">empire.com</span></h1>
-      <hr className="featurette-divider mb-5" />
-      {/* //Three columns of text below the carousel */}
-      <div className="row shadow-lg p-3 mb-5 rounded  animate__animated animate__backInDown" bis_skin_checked="1">
-        <div className="col-lg-4" bis_skin_checked="1">
+    <div className="bg-dark bg-gradient pt-5 pb-5 ">
+      <div className=" container marketing  bg-dark bg-gradient" bis_skin_checked="1">
+        <div className="d-flex align-items-end position-sticky top-0 z-3  bg-dark bg-gradient rounded-4 shadow-lg p-3 mb-5 rounded opacity-100 animate__animated animate__pulse">
+          <button id={style.togglebutton} class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+            <img src="/circle.png" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="50" height="50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+          </button>
+          <h1 className="featurette-heading fw-normal lh-1 text-white">Portfolio <span className="text-white-75"></span></h1>
+
+        </div>
+        <hr className="featurette-divider mb-5 text-white" />
+        {/*sidebar */}
+        <div className="offcanvas offcanvas-start bg-dark bg-gradient" tabIndex="-1" id="sidebar">
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="sidebarLabel"></h5>
+            <button type="button" className="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+          </div>
+          <div className="offcanvas-body">
+            <div className="d-flex flex-column flex-shrink-0 p-3 " >
+              <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                {/* <svg className="bi pe-none me-2" width="40" height="32"><use xlinkHref="#bootstrap"></use></svg> */}
+                {/* <span className="fs-4">Sidebar</span> */}
+              </a>
+              <hr className="text-white" />
+              <ul className="nav nav-pills flex-column mb-auto">
+                <li className="nav-item">
+                  <a href="#aboutme" className="nav-link text-white">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                    About me
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#contactinfo" className="nav-link text-white">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#contact"></use></svg>
+                    Contact
+                  </a>
+                </li>
+                <hr className="text-white" />
+                <li className="nav-item text-white mt-2 mb-2 pb-2 d-flex justify-content-between">
+                  <h4>Projects:</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                    <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659" />
+                  </svg>
+                </li>
+                <li className="nav-item">
+                  <a href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white text-decoration-underline">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                    Clothing Store
+                  </a>
+                </li>
+                {/* <li>
+                  <a href="#" className="nav-link link-body-emphasis">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="nav-link link-body-emphasis">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#table"></use></svg>
+                    Orders
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="nav-link link-body-emphasis">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
+                    Products
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="nav-link link-body-emphasis">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#people-circle"></use></svg>
+                    Customers
+                  </a>
+                </li> */}
+              </ul>
+              <hr className="text-white" />
+            </div>
+          </div>
+        </div>
+
+        {/* //Three columns of text below the carousel */}
+        <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  animate__animated animate__backInDown rounded-4  " bis_skin_checked="1">
+          {/* <div className="col-lg-4" bis_skin_checked="1">
           <img src="/leader.jpg" className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
           <h2 className="fw-normal">Penis Dushilin (Emperor)</h2>
           <p>Penis Dushilin, ever kind and gracious to his residents, a leader beloved by all. His heart overflow with gratitude for his people, and his rule was marked by benevolence and wisdom. A master of diplomacy, he forged alliances with numerous countries, emerging victorious in all endeavors. His noble spirit and unwavering kindness made him a cherished figure in the annals of Donetsk.</p>
           <p><Link className="btn btn-secondary" href="/penisdushilin">More »</Link></p>
-        </div>
-        <div className="col-lg-4" bis_skin_checked="1">
+        </div> */}
+          {/* <div className="col-lg-4 w-100 text-center" bis_skin_checked="1">
           <img src="/berserkdnr.jpg" className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
-          <h2 className="fw-normal">Guts (Commander)</h2>
+          <h2 className="fw-normal">Kirill Nevishniy</h2>
           <p>Guts, the Black Swordsman, is a paragon of relentless determination and fierce independence. Hardened by a life of ceaseless strife, he embodies unyielding resilience and raw tenacity. Despite his stoic and often grim exterior, a fierce loyalty and a deep sense of justice burn within him. In the throes of the Flies-Donetsk War, when Penis Dushilin faced dire peril, Guts pledged his formidable strength to the great leader's cause. His indomitable spirit and relentless pursuit of victory turned the tide of battle, rendering him a legend in his own time.</p>
           <p><Link className="btn btn-secondary" href="/guts">More »</Link></p>
-        </div>
-        <div className="col-lg-4" bis_skin_checked="1">
+        </div> */}
+          <div className="mt-5 mb-5 d-flex justify-content-center">
+            <div className="col-lg-4 rounded-4 shadow-lg p-3 rounded animate__animated animate__backInDown" bis_skin_checked="1">
+              <div className="col-lg-4 w-100 d-flex justify-content-center" bis_skin_checked="1">
+                <img src="/icon.png" className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+              </div>
+              <div id="aboutme" className="col-lg-4 w-100 d-flex justify-content-center" bis_skin_checked="1">
+                <h2 className="fw-normal text-white ">Kirill Nevishniy</h2>
+              </div>
+            </div>
+          </div>
+          {/* <div className="col-lg-4" bis_skin_checked="1">
           <img src="/patron.jpg" className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
           <h2 className="fw-normal">Patron (Demolitionist)</h2>
           <p>Dog Patron, a creature of immense pride and boundless courage, lives with little regard for his own life. Ever self-assured and valiant, he stands fearless against any threat. His one indulgence, a fondness for candies, adds a touch of whimsy to his otherwise noble and daring nature. <span className="text-body-black">(Died in 1938)</span></p>
           <p><Link className="btn btn-secondary" href="/patron">More »</Link></p>
+        </div> */}
         </div>
-      </div>
 
 
-      {/* <!-- START THE FEATURETTES --> */}
+        {/* <!-- START THE FEATURETTES --> */}
 
-      <hr className="featurette-divider" />
+        <hr className="featurette-divider text-white" />
 
-      <div className="row featurette bg-secondary bg-opacity-10  rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
-        <div className="col-md-7 mt-2" bis_skin_checked="1">
-          <h2 className="featurette-heading fw-normal lh-1">War against Luhansk.<span className="text-body-secondary">Obvious victory.</span></h2>
-          <p className="lead text-body-emphasis">In the Year of Our Lord, a great war arose between the mighty Empire of Donetsk and the beleaguered country of Luhansk. This conflict, known in the annals as the War of Ruins, raged for four years and two nights, a time of immense strife and devastation.
-
-            The people of Luhansk, valiant yet ill-equipped, faced the might of Donetsk's advanced armaments. The warriors of Luhansk bore only spears, their technology primitive compared to the formidable laserguns wielded by the Donetsk troops. The disparity in arms weighed heavily upon the Luhansk troopers, who fought bravely but were incessantly worn down by the relentless onslaught.
-
-            For four long years, the land of Luhansk was transformed into a landscape of desolation. Villages were razed, cities crumbled, and hope seemed a distant memory. The once-prosperous country was reduced to ruins, its people weakened and weary. The nights offered no respite, as the two additional nights of relentless conflict drained the last vestiges of their strength.
-
-            Despite the overwhelming power of Donetsk, the war was not easily won. The Luhansk warriors fought with a desperation born of survival, their spirit unbroken even as their numbers dwindled. The battles were fierce, and the toll on both sides was heavy. Yet, the superior technology and unyielding resolve of Donetsk's forces gradually turned the tide.
-
-            In the end, the victory of Donetsk was all but assured. The Empire's banners flew high over the conquered land, a testament to their indomitable might. However, the conflict left scars that would not easily heal. Hidden within the ruins, scattered remnants of the Luhansk people continued to resist. These pockets of defiance, though small, were a constant reminder that the spirit of Luhansk had not been entirely extinguished.
-
-            Thus, the War of Ruins came to a close, marking a new era for the Empire of Donetsk. Their triumph, though resounding, was shadowed by the lingering presence of Luhansk’s hidden survivors. The tale of this great war would be told for generations, a somber reminder of the cost of victory and the resilience of the human spirit.</p>
+        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 mt-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
+          <div className="col-md-7 mt-2" bis_skin_checked="1">
+            <h2 className="featurette-heading fw-normal lh-1 text-white">About me<span className="text-body-secondary"></span></h2>
+            <p className="lead text-white-50">I’m a passionate Front-End Developer with a love for design and technology. My journey into web development began with a curiosity to create something both functional and visually appealing. Before diving into Front-End Development, I explored various creative tools like Photoshop and Blender, but I found my true calling in building interactive and dynamic web applications.
+            </p>
+            <p className="lead text-white-50">
+              My foundational skills include HTML, CSS, JavaScript, and React, which I honed through a comprehensive development course. Beyond the course, I've expanded my expertise by learning additional languages and frameworks such as Next.js, Tailwind, and Vue.js. I’m particularly fascinated by the process of optimizing projects—transforming a simple HTML page into a fully functional, high-performance website, and continually testing and enhancing it with new features.
+            </p>
+            <p className="lead text-white-50">
+              One of my proudest achievements is a Clothing Store project I developed as the capstone of my course. This was my first large-scale project, and it challenged me to leverage all my skills to build a complete, working e-commerce system. While I haven’t yet participated in group projects, I’m eager to collaborate and gain new experiences in team settings.
+            </p>
+            <p className="lead text-white-50">
+              I stay updated on the latest trends and technologies in Front-End Development by watching educational videos and tutorials. Though the journey has had its challenges—particularly when adding new features—I’ve learned that a methodical approach to problem-solving is key. By stepping back, evaluating potential impacts, and then moving forward with a clear plan, I’ve found that even the most complex issues can be resolved efficiently.
+            </p>
+            <p className="lead text-white-50">
+              Outside of development, I have a strong interest in music and enjoy playing the piano in my free time. This creative outlet complements my work in coding, where I start by designing a basic, non-functional interface and then refine and enhance it with additional features.
+            </p>
+            <p className="lead text-white-50">
+              Looking ahead, I’m committed to furthering my skills not only in Front-End Development but across the entire IT landscape. My goal is to work on creative and social projects that make a positive impact, continuing to push the boundaries of what I can achieve as a developer.
+            </p>
+          </div>
+          <div className="col-md-5 mt-2 rounded-4" bis_skin_checked="1">
+            {/* <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> */}
+            {/* <img src="/luhansk-donetsk.jpg" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img> */}
+            <AnimatedGif src="/programming-frog.gif" alt="frog coding" />
+          </div>
         </div>
-        <div className="col-md-5 mt-2 rounded-4" bis_skin_checked="1">
-          {/* <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> */}
-          <img src="/luhansk-donetsk.jpg" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+
+        <hr className="featurette-divider text-white" />
+
+        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse mt-5" bis_skin_checked="1">
+          <div className="col-md-7 mt-2  w-100 mb-3 " bis_skin_checked="1">
+            <h2 id="contactinfo" className="featurette-heading fw-normal lh-1 text-white">Contact<span className="text-body-secondary"></span></h2>
+            <div className="w-100 d-flex justify-content-center  pb-3">
+              <div className="d-flex justify-content-between w-75  pt-3 mt-4 text-center flex-norow flex-wrap">
+                <a className="lead text-white-50 link-offset-2 link-underline link-underline-opacity-0" href="mailto:kirillvish482@gmail.com">
+                  gmail: kirillvish482@gmail.com
+                </a>
+                <a className="lead text-white-50 link-offset-2 link-underline link-underline-opacity-0 " href="tell:+380951503677">
+                  tell: +380 95 150 36 77
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <hr className="featurette-divider" />
-
-      <div className="row featurette bg-secondary bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
+        {/* <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
         <div className="col-md-7 order-md-2  mt-2" bis_skin_checked="1">
           <h2 className="featurette-heading fw-normal lh-1">Empire against flies.<span className="text-body-secondary">Blood war.</span></h2>
           <p className="lead text-body-emphasis">In the chronicles of the Donetsk Empire, the most arduous and relentless conflict was the Great War against the Flies, a war that spanned the centuries and tested the mettle of its people like no other. This struggle, unrivaled in its scale and ferocity, continued into the modern age, etched into the memories of generations.
@@ -81,7 +195,7 @@ export default function Home() {
 
       <hr className="featurette-divider" />
 
-      <div className="row featurette bg-secondary bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
+      <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
         <div className="col-md-7 mt-2" bis_skin_checked="1">
           <h2 className="featurette-heading fw-normal lh-1">Western sanctions. <span className="text-body-secondary">Never forget.</span></h2>
           <p className="lead text-body-emphasis">In the annals of the Empire of Donetsk, the era of the Western Sanctions stands as a testament to the resilience and unyielding spirit of its people. As the world entered a time of rapid technological evolution, the Western governments, seeing the growing influence and strength of Donetsk, launched an insidious campaign known as the "Internet War." Their aim was clear: to bring the proud empire to its knees and extend their dominion across the globe.
@@ -103,12 +217,13 @@ export default function Home() {
         <div className="col-md-5 mt-2" bis_skin_checked="1">
           <img src="/usafire.jpg" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
         </div>
-      </div>
+      </div> */}
 
-      <hr className="featurette-divider" />
+        {/* <hr className="featurette-divider" /> */}
 
-      {/* <!-- /END THE FEATURETTES --> */}
-
+        {/* <!-- /END THE FEATURETTES --> */}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      </div >
     </div>
   )
 }
