@@ -2,3 +2,27 @@
   border-radius: 0%;
   border-color: transparent;
 }
+
+#menusidebarbutton {
+  display: none;
+}
+
+#navigateheader {
+  display: block;
+}
+
+
+@media(max-width:768px) {
+  #menuicon {
+    width: 35px;
+    height: 35px;
+  }
+
+  #menusidebarbutton {
+    display: block;
+  }
+
+  #navigateheader {
+    display: none !important;
+  }
+}
