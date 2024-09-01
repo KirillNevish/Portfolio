@@ -3,6 +3,7 @@ import Link from 'next/link';
 import 'animate.css';
 import style from './page.module.css';
 import AnimatedGif from './animatedGif';
+import ProjectsDropdown from './dropDown/page';
 
 
 
@@ -19,7 +20,7 @@ export default function Home() {
           </button>
           <h1 className="featurette-heading fw-normal lh-1 text-white">Portfolio <span className="text-white-75"></span></h1>
           <div id={style.navigateheader} className="w-100 d-flex justify-content-center">
-            <div className=" w-75 d-flex justify-content-between">
+            <div className=" w-75 d-flex justify-content-between align-items-center">
               <a href="#aboutme" className="nav-link text-white">
                 <h4 className="featurette-heading fw-normal lh-1 text-white">
                   About me
@@ -32,13 +33,13 @@ export default function Home() {
                 </h4>
               </a><span className="text-white-75"></span>
 
-
-              <a href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white       text-decoration-underline">
+              <ProjectsDropdown></ProjectsDropdown>
+              {/* <a href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white       text-decoration-underline">
                 <h4 className="featurette-heading fw-normal lh-1 text-white">
                   Clothing Store
                 </h4>
-              </a>
-              <span className="text-white-75"></span>
+              </a> */}
+              {/* <span className="text-white-75"></span> */}
 
             </div>
           </div>
@@ -81,6 +82,12 @@ export default function Home() {
                   <a href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white text-decoration-underline">
                     <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
                     Clothing Store
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="https://lovelycookingrecipes.netlify.app/" target="_blank" className="nav-link text-white text-decoration-underline">
+                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                    Cooking recipes
                   </a>
                 </li>
               </ul>

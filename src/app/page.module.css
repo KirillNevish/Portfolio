@@ -11,6 +11,17 @@
   display: block;
 }
 
+#dropButton {
+  top: -7%;
+}
+
+
+#dropDownOption:hover {
+  background-color: transparent;
+  color: white;
+
+}
+
 
 @media(max-width:768px) {
   #menuicon {
