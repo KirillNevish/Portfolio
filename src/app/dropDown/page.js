@@ -34,7 +34,7 @@ const ProjectsDropdown = () => {
                 <li>
                     <a
                         className="dropdown-item text-white"
-                        href="https://exampleproject2.netlify.app"
+                        href="https://lovelycookingrecipes.netlify.app"
                         target="_blank"
                         id={style.dropDownOption}
                         rel="noopener noreferrer"
