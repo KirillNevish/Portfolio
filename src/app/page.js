@@ -144,7 +144,7 @@ export default function Home() {
 
         <hr className="featurette-divider text-white" />
 
-        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 rounded animate__animated animate__pulse mt-5" bis_skin_checked="1">
+        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3  rounded animate__animated animate__pulse mt-5" bis_skin_checked="1">
           <div className="col-md-7 mt-2  w-100 mb-3 " bis_skin_checked="1">
             <h2 id="contactinfo" className="featurette-heading fw-normal lh-1 text-white">Contact<span className="text-body-secondary"></span></h2>
             <div className="w-100 d-flex justify-content-center text-center pb-3">
