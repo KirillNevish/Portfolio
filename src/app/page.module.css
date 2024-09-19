@@ -1,6 +1,16 @@
 #togglebutton {
   border-radius: 0%;
   border-color: transparent;
+  display: flex;
+  align-self: start;
+  margin-bottom: 5px;
+}
+
+#blurbg {
+  position: relative;
+  background: rgba(65, 72, 78, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 #menusidebarbutton {
@@ -16,21 +26,35 @@
 }
 
 
-#dropDownOption:hover {
-  background-color: transparent;
+#navigatebuttonheader {
+  transition: color 1s ease-out, transform 1s ease-out;
   color: white;
+  transform: translateY(0%);
 
+}
+
+#navigatebuttonheader:hover {
+  transition-timing-function: ease-in-out;
+  transition: all 0.5s;
+  background-color: transparent;
+  color: rgb(172, 168, 168) !important;
 }
 
 
 @media(max-width:768px) {
   #menuicon {
-    width: 35px;
-    height: 35px;
+    width: 22px;
+    height: 22px;
   }
+
+  #mainbg {
+    padding-bottom: 0px !important;
+  }
+
 
   #menusidebarbutton {
     display: block;
+
   }
 
   #navigateheader {
