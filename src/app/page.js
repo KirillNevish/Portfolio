@@ -4,102 +4,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import style from './page.module.css';
 import AnimatedGif from './animatedGif';
-import ProjectsDropdown from './dropDown/page';
+import Header from './header/page';
+import Footer from './footer/page';
+import LeftSidebar from './leftSidebar/page';
 
 
 
 export default function Home() {
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text)
-      .then(() => {
-        alert('Phone number copied to clipboard: ' + text);
-      })
-      .catch((err) => {
-        console.error('Failed to copy: ', err);
-      });
-  };
-
   return (
-    <div id={style.mainbg} className="bg-dark bg-gradient pt-5 pb-5 ">
-      <div className=" container marketing bg-dark bg-gradient" bis_skin_checked="1">
-        <div id={style.blurbg} className="d-flex align-items-end position-sticky top-0 z-3 rounded-4 shadow-lg p-3 mb-5 rounded opacity-100 animate__animated animate__pulse">
-          <button id={style.togglebutton} class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-            <div id={style.menusidebarbutton} className="w-100">
-              <img id={style.menuicon} src="/circle.png" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
-            </div>
-          </button>
-          <h1 className="featurette-heading fw-normal lh-1 text-white align-self-end">Portfolio <span className="text-white-75"></span></h1>
-          <div id={style.navigateheader} className="w-100 d-flex justify-content-center">
-            <div className=" w-75 d-flex justify-content-between align-items-center">
-              <a href="#aboutme" className="nav-link text-white">
-                <h4 id={style.navigatebuttonheader} className="featurette-heading fw-normal lh-1">
-                  About me
-                </h4>
-              </a>
-              <span className="text-white-75"></span>
-              <a href="#contactinfo" className="nav-link text-white">
-                <h4 id={style.navigatebuttonheader} className="featurette-heading fw-normal lh-1 text-white">
-                  Contact
-                </h4>
-              </a><span className="text-white-75"></span>
+    <div id={style.mainbg} className="bg-dark bg-gradient pt-5 pb-5 d-flex justify-content-center">
 
-              <ProjectsDropdown></ProjectsDropdown>
-            </div>
-          </div>
+      <LeftSidebar></LeftSidebar>
 
-        </div>
-        <hr className="featurette-divider mb-5 text-white" />
-        {/*sidebar */}
-        <div className=" offcanvas offcanvas-start bg-dark bg-gradient w-75" tabIndex="-1" id="sidebar">
-          <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="sidebarLabel"></h5>
-            <button type="button" className="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close">
-            </button>
-          </div>
-          <div className="offcanvas-body">
-            <div className="d-flex flex-column flex-shrink-0 p-3 " >
-              <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-              </a>
-              <hr className="text-white" />
-              <ul className="nav nav-pills flex-column mb-auto">
-                <li className="nav-item">
-                  <a id={style.navigatebuttonheader} href="#aboutme" className="nav-link text-white">
-                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
-                    About me
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a id={style.navigatebuttonheader} href="#contactinfo" className="nav-link text-white">
-                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#contact"></use></svg>
-                    Contact
-                  </a>
-                </li>
-                <hr className="text-white" />
-                <li className="nav-item text-white mt-2 mb-2 pb-2 d-flex justify-content-between">
-                  <h4>Projects:</h4>
-                  <svg id={style.navigatebuttonheader} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-                    <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659" />
-                  </svg>
-                </li>
-                <li className="nav-item">
-                  <a id={style.navigatebuttonheader} href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white text-decoration-underline">
-                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
-                    Clothing Store
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a id={style.navigatebuttonheader} href="https://lovelycookingrecipes.netlify.app/" target="_blank" className="nav-link text-white text-decoration-underline">
-                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
-                    Cooking recipes
-                  </a>
-                </li>
-              </ul>
-              <hr className="text-white" />
-            </div>
-          </div>
-        </div>
+      <div id={style.mainContnent} className="w-50 marketing bg-dark bg-gradient" bis_skin_checked="1">
 
+        <Header></Header>
 
         <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  animate__animated animate__backInDown rounded-4  " bis_skin_checked="1">
 
@@ -109,19 +29,15 @@ export default function Home() {
                 <img src="/icon.png" className="bd-placeholder-img shadow-lg border-secondary border-opacity-10 border border-5  rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
               </div>
               <div id="aboutme" className="col-lg-4 w-100 d-flex justify-content-center" bis_skin_checked="1">
-                <h2 className="fw-normal text-white ">Kirill Nevishniy</h2>
+                <h2 className="fw-normal text-white">Kirill Nevishniy</h2>
               </div>
             </div>
           </div>
         </div>
-
-
-
-
         <hr className="featurette-divider text-white" />
 
-        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 mt-5 rounded animate__animated animate__pulse" bis_skin_checked="1">
-          <div className="col-md-7 mt-2" bis_skin_checked="1">
+        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3 mb-5 mt-5 rounded" bis_skin_checked="1">
+          <div id={style.aboutMeInfo} className="col-md-7 mt-2" bis_skin_checked="1">
             <h2 className="featurette-heading fw-normal lh-1 text-white">About me<span className="text-body-secondary"></span></h2>
             <p className="lead text-white-50">I’m a passionate Front-End Developer with a love for design and technology. My journey into web development began with a curiosity to create something both functional and visually appealing. Before diving into Front-End Development, I explored various creative tools like Photoshop and Blender, but I found my true calling in building interactive and dynamic web applications.
             </p>
@@ -141,36 +57,29 @@ export default function Home() {
               Looking ahead, I’m committed to furthering my skills not only in Front-End Development but across the entire IT landscape. My goal is to work on creative and social projects that make a positive impact, continuing to push the boundaries of what I can achieve as a developer.
             </p>
           </div>
-          <div className="col-md-5 mt-2 rounded-4" bis_skin_checked="1">
+          <div id={style.widerGif} className="col-md-5 mt-2 rounded-4" bis_skin_checked="1">
             <AnimatedGif src="/programming-frog.gif" alt="frog coding" />
           </div>
         </div>
 
         <hr className="featurette-divider text-white" />
 
-        <div className="row featurette bg-body bg-opacity-10 rounded-4 shadow-lg p-3  rounded animate__animated animate__pulse mt-5" bis_skin_checked="1">
-          <div className="col-md-7 mt-2  w-100 mb-3 " bis_skin_checked="1">
-            <h2 id="contactinfo" className="featurette-heading fw-normal lh-1 text-white">Contact<span className="text-body-secondary"></span></h2>
-            <div className="w-100 d-flex justify-content-center text-center ">
-              <div className=" w-75  pt-3 mt-2 text-center flex-row flex-wrap  d-flex justify-content-evenly">
-                <a className="lead text-white-50   link-offset-2 link-underline link-underline-opacity-0 text-center" href="mailto:kirillvish482@gmail.com">
-                  <h5 id={style.navigatebuttonheader}>gmail: nevishniykirill@gmail.com</h5>
-                </a>
-                <a className="lead text-white-50 link-offset-2 d-flex flew-nowrap link-underline link-underline-opacity-0 text-center" href="tell:+380951503677"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    copyToClipboard('+380 95 150 36 77');
-                  }}
-                >
-                  <h5 id={style.navigatebuttonheader}>tell: +380 95 150 36 77</h5>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Footer></Footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       </div >
-    </div>
+      <div id={style.leftSidebar} className=" d-flex rounded-4 shadow-lg p-3 rounded opacity-100 h-50 m-3 position-sticky pb-5 bg-body bg-opacity-10" bis_skin_checked="1">
+        <hr className="text-white mt-5" />
+        <a id={style.navigatebuttonheader} href="#aboutme" className="nav-link text-white mb-3 ">
+          <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+          About me
+        </a>
+        <a id={style.navigatebuttonheader} href="#contactinfo" className="nav-link text-white">
+          <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#contact"></use></svg>
+          Contact
+        </a>
+        <hr className="text-white" />
+      </div>
+    </div >
   )
 }

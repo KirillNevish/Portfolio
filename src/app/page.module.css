@@ -40,11 +40,56 @@
   color: rgb(172, 168, 168) !important;
 }
 
+#leftSidebar {
+  flex-direction: column;
+  width: 13%;
+  min-width: 180px;
+  top: 20px;
+}
+
+#rightSidebar {
+  top: 20px;
+  width: 13%;
+  min-width: 180px;
+
+}
+
+
+
+@media (max-width: 992px) {
+  #widerGif {
+    display: none !important;
+  }
+
+  #aboutMeInfo {
+    width: 100% !important;
+  }
+
+  #navigateheader {
+    display: none !important;
+  }
+}
 
 @media(max-width:768px) {
   #menuicon {
     width: 22px;
     height: 22px;
+  }
+
+  #widerGif {
+    display: block !important;
+  }
+
+  #aboutMeInfo {
+    width: fit-content !important;
+  }
+
+  #leftSidebar {
+    display: none !important;
+  }
+
+  #rightSidebar {
+    display: none !important;
   }
 
   #mainbg {
@@ -57,7 +102,12 @@
 
   }
 
-  #navigateheader {
-    display: none !important;
+  #mainContnent {
+    min-width: 95% !important;
   }
+
+  #skillsColumns {
+    width: 50%;
+  }
+
 }
