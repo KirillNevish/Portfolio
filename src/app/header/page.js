@@ -1,16 +1,14 @@
 "use client";
 
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css';
 import style from '../page.module.css';
 import ProjectsDropdown from '../dropDown/page';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Header = () => {
     return (
         <>
-            <div id={style.blurbg} className="d-flex align-items-end position-sticky top-0 z-3 rounded-4 shadow-lg p-3 mb-5 rounded opacity-100 animate__animated animate__pulse">
+            <div id={style.blurbg} className="d-flex align-items-end position-sticky top-0 z-3 rounded-4 shadow-lg p-3 mb-5 rounded opacity-100">
                 <button id={style.togglebutton} class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
                     <div id={style.menusidebarbutton} className="w-100">
                         <img id={style.menuicon} src="/circle.png" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
@@ -38,25 +36,24 @@ const Header = () => {
                 </div>
                 <div className="offcanvas-body">
                     <div className="d-flex flex-column flex-shrink-0 p-3 " >
-                        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        </a>
+
                         <hr className="text-white" />
                         <ul className="nav nav-pills flex-column mb-auto">
                             <li className="nav-item">
-                                <a id={style.navigatebuttonheader} href="/" className="nav-link text-white">
-                                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                                <a id={style.navigatebuttonheader} href="/" className="nav-link text-white mx-4">
+
                                     About me
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a id={style.navigatebuttonheader} href="/skills" className="nav-link text-white">
-                                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#contact"></use></svg>
+                                <a id={style.navigatebuttonheader} href="/skills" className="nav-link text-white mx-4">
+
                                     Skills
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a id={style.navigatebuttonheader} href="/cources" className="nav-link text-white">
-                                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#contact"></use></svg>
+                                <a id={style.navigatebuttonheader} href="/cources" className="nav-link text-white mx-4">
+
                                     Cources
                                 </a>
                             </li>
@@ -68,14 +65,14 @@ const Header = () => {
                                 </svg>
                             </li>
                             <li className="nav-item">
-                                <a id={style.navigatebuttonheader} href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white text-decoration-underline">
-                                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                                <a id={style.navigatebuttonheader} href="https://myshopreact112.netlify.app" target="_blank" className="nav-link text-white text-decoration-underline mx-4">
+
                                     Clothing Store
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a id={style.navigatebuttonheader} href="https://lovelycookingrecipes.netlify.app/" target="_blank" className="nav-link text-white text-decoration-underline">
-                                    <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                                <a id={style.navigatebuttonheader} href="https://lovelycookingrecipes.netlify.app/" target="_blank" className="nav-link text-white text-decoration-underline mx-4">
+
                                     Cooking recipes
                                 </a>
                             </li>
@@ -83,8 +80,10 @@ const Header = () => {
                         <hr className="text-white" />
                     </div>
                 </div>
-            </div>
+                <script src='bootstrap/dist/js/bootstrap.bundle.min'></script>
 
+            </div>
+            {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> */}
         </>
     );
 }

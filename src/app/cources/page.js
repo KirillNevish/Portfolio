@@ -1,8 +1,11 @@
+"use client";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css';
 import style from '../page.module.css';
-import Header from '../header/page';
+import 'animate.css';
+// import Header from '../header/page';
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('../header/page'), { ssr: false });
 import Footer from '../footer/page';
 import LeftSidebar from '../leftSidebar/page';
 
@@ -17,10 +20,10 @@ const Cources = () => {
 
                 <Header></Header>
 
-                <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  animate__animated animate__backInDown rounded-4  " bis_skin_checked="1">
+                <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center animate__animated animate__backInDown   rounded-4 " bis_skin_checked="1">
 
-                    <div className="mt-5 mb-5 d-flex justify-content-center">
-                        <div className="col-lg-4 rounded-4 shadow-lg px-3 py-1 w-50 rounded animate__animated animate__backInDown" bis_skin_checked="1">
+                    <div className="mt-5 mb-5 d-flex justify-content-center animate__animated animate__backInDown">
+                        <div className="col-lg-4 rounded-4 shadow-lg px-3 py-1 w-50 rounded" bis_skin_checked="1">
                             <div id="cources" className="col-lg-4 w-100 d-flex justify-content-center " bis_skin_checked="1">
                                 <h2 className="fw-normal text-white mt-1">Cources</h2>
                             </div>

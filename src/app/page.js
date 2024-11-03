@@ -1,35 +1,40 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import style from './page.module.css';
 import AnimatedGif from './animatedGif';
-import Header from './header/page';
+// import Header from './header/page';
+const Header = dynamic(() => import('./header/page'), { ssr: false });
 import Footer from './footer/page';
 import LeftSidebar from './leftSidebar/page';
+
 
 
 
 export default function Home() {
 
 
-  useEffect(() => {
-    console.log(document.title); // Safe to use document here
-  }, []);
+  // useEffect(() => {
+  //   if (typeof document !== 'undefined') {
+  //     console.log(document.title); // Safe to use document here
+  //   }
+  // }, []);
   return (
     <div id={style.mainbg} className="bg-dark bg-gradient pt-5 pb-5 d-flex justify-content-center">
 
       <LeftSidebar></LeftSidebar>
 
-      <div id={style.mainContnent} className="w-50 marketing bg-dark bg-gradient" bis_skin_checked="1">
+      <div id={style.mainContnent} className="w-50 marketing bg-dark bg-gradient" >
 
         <Header></Header>
 
-        <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  animate__animated animate__backInDown rounded-4  " bis_skin_checked="1">
+        <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center rounded-4  animate__animated animate__backInDown" bis_skin_checked="1">
 
-          <div className="mt-5 mb-5 d-flex justify-content-center">
-            <div className="col-lg-4 rounded-4 shadow-lg p-3 rounded animate__animated animate__backInDown" bis_skin_checked="1">
+          <div className="mt-5 mb-5 d-flex justify-content-center animate__animated animate__backInDown">
+            <div className="col-lg-4 rounded-4 shadow-lg p-3 rounded " bis_skin_checked="1">
               <div className="col-lg-4 w-100 d-flex justify-content-center mb-1" bis_skin_checked="1">
                 <img src="/icon.png" className="bd-placeholder-img shadow-lg border-secondary border-opacity-10 border border-5  rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
               </div>

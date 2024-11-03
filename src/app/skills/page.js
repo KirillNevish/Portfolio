@@ -1,11 +1,14 @@
-
+"use client";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css';
 import style from '../page.module.css';
-import Header from '../header/page';
+import 'animate.css';
+// import Header from '../header/page';
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('../header/page'), { ssr: false });
 import Footer from '../footer/page';
 import LeftSidebar from '../leftSidebar/page';
+
 
 const Skills = () => {
     return (
@@ -17,10 +20,10 @@ const Skills = () => {
 
                 <Header></Header>
 
-                <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  animate__animated animate__backInDown rounded-4  " bis_skin_checked="1">
+                <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  rounded-4  animate__animated animate__backInDown" bis_skin_checked="1">
 
-                    <div className="mt-5 mb-5 d-flex justify-content-center">
-                        <div className="col-lg-4 rounded-4 shadow-lg px-3 py-1 w-50 rounded animate__animated animate__backInDown" bis_skin_checked="1">
+                    <div className="mt-5 mb-5 d-flex justify-content-center animate__animated animate__backInDown">
+                        <div className="col-lg-4 rounded-4 shadow-lg px-3 py-1 w-50 rounded" bis_skin_checked="1">
                             <div id="skills" className="col-lg-4 w-100 d-flex justify-content-center " bis_skin_checked="1">
                                 <h2 className="fw-normal text-white mt-1">Skills</h2>
                             </div>
@@ -105,7 +108,8 @@ const Skills = () => {
 
                 <Footer></Footer>
 
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> */}
+
             </div >
             <div id={style.leftSidebar} className=" d-flex rounded-4 shadow-lg p-3 rounded opacity-100 h-50 m-3 position-sticky pb-5 bg-body bg-opacity-10" bis_skin_checked="1">
                 <hr className="text-white mt-5" />
@@ -119,6 +123,7 @@ const Skills = () => {
                 </a>
                 <hr className="text-white" />
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         </div >
 
 
