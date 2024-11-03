@@ -1,6 +1,4 @@
-"use client";
 
-import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import style from '../page.module.css';

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import style from './page.module.css';
@@ -12,6 +13,10 @@ import LeftSidebar from './leftSidebar/page';
 
 export default function Home() {
 
+
+  useEffect(() => {
+    console.log(document.title); // Safe to use document here
+  }, []);
   return (
     <div id={style.mainbg} className="bg-dark bg-gradient pt-5 pb-5 d-flex justify-content-center">
 
