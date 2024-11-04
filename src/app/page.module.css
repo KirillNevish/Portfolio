@@ -103,7 +103,7 @@
   }
 
   #mainContnent {
-    min-width: 95% !important;
+    width: 90% !important;
   }
 
   #skillsColumns {
