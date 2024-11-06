@@ -33,6 +33,20 @@
 
 }
 
+#navigatebuttonfooter {
+  transition: color 1s ease-out, transform 1s ease-out;
+  color: white;
+  transform: translateY(0%);
+
+}
+
+#navigatebuttonfooter:hover {
+  transition-timing-function: ease-in-out;
+  transition: all 0.5s;
+  background-color: transparent;
+  color: rgb(172, 168, 168) !important;
+}
+
 #navigatebuttonheader:hover {
   transition-timing-function: ease-in-out;
   transition: all 0.5s;
@@ -110,4 +124,7 @@
     width: 50%;
   }
 
+  #navigatebuttonfooter {
+    font-size: medium;
+  }
 }

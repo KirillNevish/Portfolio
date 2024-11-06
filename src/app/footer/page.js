@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="w-100 d-flex justify-content-center text-center ">
                     <div className=" w-75  pt-3 mt-2 text-center flex-row flex-wrap  d-flex justify-content-evenly">
                         <a className="lead text-white-50   link-offset-2 link-underline link-underline-opacity-0 text-center" href="mailto:kirillvish482@gmail.com">
-                            <h5 id={style.navigatebuttonheader}>gmail: nevishniykirill@gmail.com</h5>
+                            <h5 id={style.navigatebuttonfooter}>gmail: nevishniykirill@gmail.com</h5>
                         </a>
                         <a className="lead text-white-50 link-offset-2 d-flex flew-nowrap link-underline link-underline-opacity-0 text-center" href="tell:+380951503677"
                             onClick={(e) => {
@@ -30,7 +30,7 @@ const Footer = () => {
                                 copyToClipboard('+380 95 150 36 77');
                             }}
                         >
-                            <h5 id={style.navigatebuttonheader}>tell: +380 95 150 36 77</h5>
+                            <h5 id={style.navigatebuttonfooter}>tell: +380 95 150 36 77</h5>
                         </a>
                     </div>
                 </div>
