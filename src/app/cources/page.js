@@ -12,11 +12,11 @@ import LeftSidebar from '../leftSidebar/page';
 const Cources = () => {
 
     return (
-        <div id={style.mainbg} className="bg-dark bg-gradient pt-5 pb-5 d-flex justify-content-center">
+        <div id={style.mainbg} className=" pt-5 pb-5 d-flex justify-content-center">
 
             <LeftSidebar></LeftSidebar>
 
-            <div id={style.mainContnent} className="w-50 marketing bg-dark bg-gradient" bis_skin_checked="1">
+            <div id={style.mainContnent} className="w-50 marketing" bis_skin_checked="1">
 
                 <Header></Header>
 

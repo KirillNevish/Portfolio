@@ -3,6 +3,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../page.module.css';
 import ProjectsDropdown from '../dropDown/page';
+import '../globals.css'
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
 
             <hr className="featurette-divider mb-5 text-white" />
             {/*sidebar */}
-            <div className=" offcanvas offcanvas-start bg-dark bg-gradient w-75" tabIndex="-1" id="sidebar">
+            <div className=" offcanvas offcanvas-start w-75" tabIndex="-1" id="sidebar">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="sidebarLabel"></h5>
                     <button type="button" className="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -82,7 +83,7 @@ const Header = () => {
                 </div>
                 <script src='bootstrap/dist/js/bootstrap.bundle.min'></script>
 
-            </div>
+            </div >
             {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> */}
         </>
     );

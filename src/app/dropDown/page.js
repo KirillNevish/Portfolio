@@ -16,7 +16,7 @@ const ProjectsDropdown = () => {
             </button>
 
             {/* Dropdown menu */}
-            <ul className="dropdown-menu border-0  bg-gradient bg-dark bg-opacity-50" aria-labelledby="projectsDropdown">
+            <ul id={style.dropdownMenu} className="dropdown-menu border-0 bg-opacity-50" aria-labelledby="projectsDropdown">
                 <li>
                     <a
                         className="dropdown-item text-white"

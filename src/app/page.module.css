@@ -1,3 +1,43 @@
+#mainbg {
+  display: flex;
+  margin: 0;
+  /* position: relative; */
+  /* overflow-x: hidden; */
+  background-image: url('/CodingGIF.gif');
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+
+}
+
+#mainbg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 100%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  backdrop-filter: blur(20px);
+  /* filter: blur(10px); */
+  z-index: -1;
+}
+
+#blurbg {
+  background: rgba(65, 72, 78, 0.1);
+  backdrop-filter: blur(10px);
+  position: sticky !important;
+  top: 0;
+  z-index: 10 !important;
+}
+
 #togglebutton {
   border-radius: 0%;
   border-color: transparent;
@@ -6,11 +46,9 @@
   margin-bottom: 6px;
 }
 
-#blurbg {
-  position: relative;
+#dropdownMenu {
   background: rgba(65, 72, 78, 0.1);
   backdrop-filter: blur(10px);
-  z-index: 1;
 }
 
 #menusidebarbutton {
@@ -126,5 +164,6 @@
 
   #navigatebuttonfooter {
     font-size: medium;
+    flex-wrap: wrap;
   }
 }

@@ -15,19 +15,12 @@ import LeftSidebar from './leftSidebar/page';
 
 
 export default function Home() {
-
-
-  // useEffect(() => {
-  //   if (typeof document !== 'undefined') {
-  //     console.log(document.title); // Safe to use document here
-  //   }
-  // }, []);
   return (
-    <div id={style.mainbg} className="bg-dark bg-gradient pt-5 pb-5 d-flex justify-content-center">
+    <div id={style.mainbg} className=" pt-5 pb-5 d-flex justify-content-center">
 
       <LeftSidebar></LeftSidebar>
 
-      <div id={style.mainContnent} className="w-50 marketing bg-dark bg-gradient" >
+      <div id={style.mainContnent} className="w-50 marketing " >
 
         <Header></Header>
 

@@ -1,0 +1,4 @@
+#sidebar {
+    background: rgba(65, 72, 78, 0.1);
+    backdrop-filter: blur(10px);
+}
