@@ -21,7 +21,7 @@ export default function Home() {
 
       <LeftSidebar></LeftSidebar>
 
-      <div id={style.mainContnent} className="w-50 marketing z-1" bis_skin_checked="1">
+      <div id={style.mainContnent} className="w-50 marketing z-1">
 
         <Header></Header>
 
