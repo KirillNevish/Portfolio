@@ -16,13 +16,13 @@
 }
 
 #blurContainer {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: -10;
   width: 100%;
-  height: 140%;
+  height: 100%;
   backdrop-filter: blur(10px);
   z-index: 0 !important;
   background-color: transparent;
