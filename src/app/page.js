@@ -17,7 +17,7 @@ import LeftSidebar from './leftSidebar/page';
 export default function Home() {
   return (
     <div id={style.mainbg} className="pt-5 pb-5 d-flex justify-content-center">
-      <div id={style.blurContainer}></div>
+      <div id={style.blurContainer} ></div>
 
       <LeftSidebar></LeftSidebar>
 
