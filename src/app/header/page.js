@@ -9,7 +9,7 @@ import '../globals.css'
 const Header = () => {
     return (
         <>
-            <div id={style.blurbg} className="d-flex align-items-end position-sticky top-0 z-3 rounded-4 shadow-lg p-3 mb-5 rounded opacity-100">
+            <div id={style.blurbg} className="d-flex align-items-end position-sticky top-0 z-3 rounded-4 shadow-lg p-3 mb-5 rounded opacity-100 bg-body bg-opacity-10">
                 <button id={style.togglebutton} class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
                     <div id={style.menusidebarbutton} className="w-100">
                         <img id={style.menuicon} src="/circle.png" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>

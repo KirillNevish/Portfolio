@@ -13,14 +13,15 @@ import LeftSidebar from '../leftSidebar/page';
 const Skills = () => {
     return (
         <div id={style.mainbg} className=" pt-5 pb-5 d-flex justify-content-center">
+            <div id={style.blurContainer}></div>
 
             <LeftSidebar></LeftSidebar>
 
-            <div id={style.mainContnent} className="w-50 marketing" bis_skin_checked="1">
+            <div id={style.mainContnent} className="w-50 marketing z-1" bis_skin_checked="1">
 
                 <Header></Header>
 
-                <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  rounded-4  animate__animated animate__backInDown" bis_skin_checked="1">
+                <div className="row shadow-lg p-3 mb-5 rounded d-flex justify-content-center  rounded-4  animate__animated animate__backInDown bg-body bg-opacity-10" bis_skin_checked="1">
 
                     <div className="mt-5 mb-5 d-flex justify-content-center animate__animated animate__backInDown">
                         <div className="col-lg-4 rounded-4 shadow-lg px-3 py-1 w-50 rounded" bis_skin_checked="1">
