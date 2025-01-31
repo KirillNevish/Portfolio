@@ -3,7 +3,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../page.module.css';
 import 'animate.css';
-// import Header from '../header/page';
 import dynamic from 'next/dynamic';
 const Header = dynamic(() => import('../header/page'), { ssr: true });
 import Footer from '../footer/page';

@@ -4,9 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../page.module.css';
 import ProjectsDropdown from '../dropDown/page';
 import '../globals.css'
+import { useEffect } from "react";
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Header = () => {
+    useEffect(() => {
+        // Ensure Bootstrap JavaScript features work after render
+        require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }, []);
     return (
         <>
             <div id={style.blurbg} className="d-flex align-items-end position-sticky top-0 z-3 rounded-4 shadow-lg p-3 mb-5 rounded opacity-100 bg-body bg-opacity-10">

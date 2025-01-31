@@ -1,12 +1,10 @@
-"use client";
+"use client"
 
 import dynamic from 'next/dynamic';
-import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import style from './page.module.css';
 import AnimatedGif from './animatedGif';
-// import Header from './header/page';
 const Header = dynamic(() => import('./header/page'), { ssr: true });
 import Footer from './footer/page';
 import LeftSidebar from './leftSidebar/page';
