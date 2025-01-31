@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mt-5 mb-5 d-flex justify-content-center animate__animated animate__backInDown">
             <div className="col-lg-4 rounded-4 shadow-lg p-3 rounded " bis_skin_checked="1">
               <div className="col-lg-4 w-100 d-flex justify-content-center mb-1" bis_skin_checked="1">
-                <img src="/icon.png" className="bd-placeholder-img shadow-lg border-secondary border-opacity-10 border border-5  rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+                <img src="/icon.avif" className="bd-placeholder-img shadow-lg border-secondary border-opacity-10 border border-5  rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
               </div>
               <div id="aboutme" className="col-lg-4 w-100 d-flex justify-content-center" bis_skin_checked="1">
                 <h2 className="fw-normal text-white">Kirill Nevishniy</h2>
