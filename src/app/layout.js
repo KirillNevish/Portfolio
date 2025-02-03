@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import ClientLayout from "./ClientLayout"; // Import the client-side layout
 import "./globals.css";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {

@@ -2,9 +2,9 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../page.module.css';
-import ProjectsDropdown from '../dropDown/page';
 import '../globals.css'
 import { useEffect } from "react";
+import ProjectsDropdown from '../dropDown/page';
 
 const Header = () => {
     useEffect(() => {

@@ -1,19 +1,8 @@
-"use client";
 
-import React, { useEffect } from 'react';
+import React from "react";
 import style from '../page.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown } from "bootstrap";
-
 const ProjectsDropdown = () => {
-    useEffect(() => {
-        require("bootstrap/dist/js/bootstrap.bundle.min.js");
-        const dropdownElementList = document.querySelectorAll(".dropdown-toggle");
-        dropdownElementList.forEach((dropdownToggleEl) => {
-            new Dropdown(dropdownToggleEl);
-        });
-    }, []);
-
     return (
         <div id={style.dropButton} className="dropdown">
             <button
@@ -52,7 +41,9 @@ const ProjectsDropdown = () => {
                     </a>
                 </li>
             </ul>
+            <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         </div>
+
     );
 };
 

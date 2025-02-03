@@ -1,25 +1,34 @@
-"use client"; // Ensure this runs on the client
+"use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation"; // ✅ Correct import for App Router
+import { useRouter } from "next/navigation";
+import "bootstrap/dist/css/bootstrap.min.css"; // ✅ Ensure Bootstrap styles are loaded
 import "./globals.css";
 
 export default function ClientLayout({ children }) {
-    const [isPageLoading, setIsPageLoading] = useState(false);
+    const [isPageLoading, setIsPageLoading] = useState(true); // Start as loading
     const router = useRouter();
 
     useEffect(() => {
-        setIsPageLoading(false); // Show loader
-
         const handleComplete = () => {
-            setIsPageLoading(true); // Hide loader
+            setIsPageLoading(false);
+
+            // ✅ Ensure Bootstrap JavaScript is reloaded
+            import("bootstrap/dist/js/bootstrap.bundle.min.js")
+                .then((bootstrap) => {
+                    document.querySelectorAll(".dropdown-toggle").forEach((dropdown) => {
+                        new bootstrap.Dropdown(dropdown); // ✅ Initialize Bootstrap dropdowns
+                    });
+                })
+                .catch((err) => console.error("Bootstrap load error:", err));
         };
 
-        // Fallback to prevent infinite loading (max 2 seconds)
-        const timeout = setTimeout(() => setIsPageLoading(false), 10);
+        // Wait 1s to allow full page load, then remove loading screen
+        const timeout = setTimeout(() => {
+            handleComplete();
+        }, 10);
 
         window.addEventListener("load", handleComplete);
-
         return () => {
             clearTimeout(timeout);
             window.removeEventListener("load", handleComplete);
@@ -38,7 +47,7 @@ export default function ClientLayout({ children }) {
     );
 }
 
-// "use client"; // Ensure this runs on the client
+// "use client";
 
 // import { useEffect, useState } from "react";
 // import { useRouter } from "next/navigation"; // ✅ Correct import for App Router
@@ -46,28 +55,35 @@ export default function ClientLayout({ children }) {
 
 // export default function ClientLayout({ children }) {
 //     const [isPageLoading, setIsPageLoading] = useState(false);
-//     const router = useRouter(); // ✅ Now using the correct router for App Router
+//     const router = useRouter();
 
 //     useEffect(() => {
-//         setIsPageLoading(true); // Show loader when navigating
-
 //         const handleComplete = () => {
-//             setIsPageLoading(false); // Hide loader when page is fully loaded
+//             setIsPageLoading(false);
+
+//             // ✅ Dynamically reinitialize Bootstrap after 1s
+//             setTimeout(() => {
+//                 import("bootstrap/dist/js/bootstrap.bundle.min.js").then((bootstrap) => {
+//                     const dropdownElementList = document.querySelectorAll(".dropdown-toggle");
+//                     dropdownElementList.forEach((dropdownToggle) => {
+//                         new bootstrap.Dropdown(dropdownToggle);
+//                     });
+//                 });
+//             }, 1000); // Wait 1 second after loading
 //         };
 
-//         window.addEventListener("load", handleComplete); // Detect full page load
-
+//         window.addEventListener("load", handleComplete);
 //         return () => window.removeEventListener("load", handleComplete);
-//     }, [router]);
+//     }, [])
 
 //     return (
 //         <div>
-//             {!isPageLoading && (
+//             {isPageLoading && (
 //                 <div id="preloader">
 //                     <div className="spinner"></div>
 //                 </div>
 //             )}
-//             {isPageLoading && children}
+//             {!isPageLoading && children}
 //         </div>
 //     );
 // }
