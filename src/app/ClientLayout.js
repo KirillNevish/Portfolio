@@ -9,14 +9,14 @@ export default function ClientLayout({ children }) {
     const router = useRouter();
 
     useEffect(() => {
-        setIsPageLoading(true); // Show loader
+        setIsPageLoading(false); // Show loader
 
         const handleComplete = () => {
-            setIsPageLoading(false); // Hide loader
+            setIsPageLoading(true); // Hide loader
         };
 
         // Fallback to prevent infinite loading (max 2 seconds)
-        const timeout = setTimeout(() => setIsPageLoading(false), 2000);
+        const timeout = setTimeout(() => setIsPageLoading(false), 10);
 
         window.addEventListener("load", handleComplete);
 
@@ -28,7 +28,12 @@ export default function ClientLayout({ children }) {
 
     return (
         <div>
-            {children}
+            {isPageLoading && (
+                <div id="preloader">
+                    <div className="spinner"></div>
+                </div>
+            )}
+            {!isPageLoading && children}
         </div>
     );
 }
