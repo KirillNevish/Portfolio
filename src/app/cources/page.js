@@ -37,8 +37,8 @@ const Cources = () => {
                     <div className="container my-5" >
                         <div id={style.aboutMeInfo} className="col-md-7 mt-2 d-flex flex-column align-items-center text-align-center w-50 rounded-4 shadow-lg rounded opacity-100" bis_skin_checked="1">
                             <div className=" mt-2 rounded-4 d-flex justify-content-center" bis_skin_checked="1">
-                                <a href="/Kirill_Nevishniy.png" target="_blank" rel="noopener noreferrer" className="d-flex justify-content-center">
-                                    <img src="/Kirill_Nevishniy.png" width="60%" className="cursor-pointer rounded-4" title="Certificate" />
+                                <a href="/Kirill-Nevishniy.avif" target="_blank" rel="noopener noreferrer" className="d-flex justify-content-center">
+                                    <img src="/Kirill-Nevishniy.avif" width="60%" className="cursor-pointer rounded-4" title="Certificate" />
                                 </a>
                             </div>
                             <h2 className="featurette-heading fw-normal lh-1 text-white fs-4 mt-2">Prog Academy</h2>

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    font-family: "Montserrat", serif;
+}
+
 #sidebar {
     /* position: relative; */
     background: rgba(65, 72, 78, 0.1);
